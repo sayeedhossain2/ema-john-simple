@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./Shop.css";
 
@@ -20,10 +21,10 @@ const Shop = () => {
     setCart(newCart);
   };
 
-  const totalPrice = cart.reduce(
-    (previousPrice, currentPrice) => previousPrice + currentPrice.price,
-    0
-  );
+  // const totalPrice = cart.reduce(
+  //   (previousPrice, currentPrice) => previousPrice + currentPrice.price,
+  //   0
+  // );
 
   // akhane avabe kora hoice j, akta state declar kora hoice ,then aray er vitor j man gula ache ogula copy kore r akta array banano hoice then or shote product add krci(product koncu ami jeta te click korbo oyta) then ota abr setcart a set korci.
 
@@ -40,12 +41,7 @@ const Shop = () => {
       </div>
 
       <div className="cart-cintainer">
-        <h1>Order summery</h1>
-        <h3>selected item: {cart.length}</h3>
-        <h3>Total price: ${totalPrice}</h3>
-        <h3>Total Shipping Charge: </h3>
-        <h3>Tax: </h3>
-        <h4>Grand Total: </h4>
+        <Cart cart={cart}></Cart>
       </div>
     </div>
   );
