@@ -1,0 +1,30 @@
+.header {
+  height: 80 px;
+  background-color: #1c2b35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 36px;
+}
+.header a:hover {
+  color: crimson;
+  transition: 0.3s;
+}
+
+/* @media screen and (max-width: 992px) {
+  .header a {
+    color: red;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+} */
